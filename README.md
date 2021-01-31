@@ -9,3 +9,6 @@ A useful tool for analyzing system data and stored network login information.
 1. Analysis of the system information
 1. List of saved networks
 1. Output of network information and passwords
+
+## :bulb: Wiki
+Here is the wiki in which I go into the details of the project and the individual functions

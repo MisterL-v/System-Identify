@@ -6,12 +6,21 @@
 #include <string>
 #include <stdio.h>
 
+using namespace std;
+
 void device_scan() {
 	std::cout << "Searching for general Device informations \n";
-	system("ipconfig/all");
+	system("systeminfo");
 	printf("\n\n");
 	system("Pause");
-};
+}
+
+void network_configuraion_scan() {
+	std::cout << "Searching for Network Configuration Data \n";
+	system("ipconfig /all");
+	printf("\n\n");
+	system("Pause");
+}
 
 void wifi_scan() {
 	std::cout << "Searching for WiFi Profiles and Passwords\n";
@@ -29,23 +38,28 @@ void wifi_scan() {
 	std::string command = (std::string("netsh wlan show profile name=").c_str());
 	command.append(wificredentials);
 	command.append(" key=clear");
+	std::cout << command;
 	system((std::string(command).c_str()));
 	printf("\n\n");
 	system("Pause");
-};
+}
 
 void choose_programm_mode() {
 	std::cout << "What type of scan do you want to perform? \n";
 	std::cout << "[1] System Information Scan\n";
-	std::cout << "[2] WiFi Profile and Password Scan\n";
+	std::cout << "[2] Network Configuration Scan\n";
+	std::cout << "[3] WiFi Profile and Password Scan\n";
 	int chooseamode;
 	std::cin >> chooseamode;
 	switch (chooseamode) {
 	case 1:
-		std::cout << "Mode: System Information Scan\n";
+		std::cout << "Mode: System Informations Scan\n";
 		device_scan();
 		break;
 	case 2:
+		std::cout << "Mode: Network Configuration Scan\n";
+		network_configuraion_scan();
+	case 3:
 		std::cout << "Mode: WiFi Profile and Password Scan\n";
 		wifi_scan();
 		break;
@@ -54,7 +68,9 @@ void choose_programm_mode() {
 		choose_programm_mode();
 		break;
 	}
-};
+}
+
+
 
 // Main-Function
 int main()

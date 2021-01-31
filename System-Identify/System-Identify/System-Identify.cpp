@@ -18,11 +18,16 @@ void wifi_scan() {
 	std::cout << "\n";
 	system("netsh wlan show profile");
 	std::cout << "Which WiFi-Profile do you want to observe? \n";
+	cin.ignore();
 	std::string wifiname;
-	std::cin >> wifiname; //Problems with space between words ->  std::getline(std::cin, wifiname);
+	std::getline(std::cin, wifiname);
+	std::cout << wifiname;
 	std::cout << "\n";
-	std::string command = (std::string("netsh wlan show profile ").c_str());
-	command.append(wifiname);
+	std::string wificredentials = "\"";
+	wificredentials.append(wifiname);
+	wificredentials.append("\"");
+	std::string command = (std::string("netsh wlan show profile name=").c_str());
+	command.append(wificredentials);
 	command.append(" key=clear");
 	system((std::string(command).c_str()));
 	printf("\n\n");
@@ -30,18 +35,18 @@ void wifi_scan() {
 };
 
 void choose_programm_mode() {
-	std::cout << "Which kind of scan do you want to perform? \n";
-	std::cout << "[1] System Informations\n";
-	std::cout << "[2] WiFi Profiles and Passwords\n";
+	std::cout << "What type of scan do you want to perform? \n";
+	std::cout << "[1] System Information Scan\n";
+	std::cout << "[2] WiFi Profile and Password Scan\n";
 	int chooseamode;
 	std::cin >> chooseamode;
 	switch (chooseamode) {
 	case 1:
-		std::cout << "Mode: System Informations\n";
+		std::cout << "Mode: System Information Scan\n";
 		device_scan();
 		break;
 	case 2:
-		std::cout << "Mode: WiFi Profiles and Passwords\n";
+		std::cout << "Mode: WiFi Profile and Password Scan\n";
 		wifi_scan();
 		break;
 	default:

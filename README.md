@@ -2,8 +2,8 @@
 ## :clipboard: Description
 A useful tool for analyzing system data and stored network login information.
 
-## :file_folder: Supported Operating Systems
-* Windows x64
+## :file_folder: Releases / Supported Operating Systems
+* Windows x64 
 
 ## :wrench: Functions
 1. Analysis of the system information

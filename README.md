@@ -3,7 +3,7 @@
 A useful tool for analyzing system data and stored network login information.
 
 ## :file_folder: Releases / Supported Operating Systems
-* Windows x64 
+* Windows x64 [Version 1.1](https://github.com/MisterL-v/System-Identify/releases/tag/1.1)
 
 ## :wrench: Functions
 1. Analysis of the system information

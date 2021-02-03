@@ -3,7 +3,7 @@
 A useful tool for analyzing system data and stored network login information.
 
 ## :file_folder: Supported Operating Systems
-* Windows
+* Windows x64
 
 ## :wrench: Functions
 1. Analysis of the system information

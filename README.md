@@ -12,4 +12,4 @@ A useful tool for analyzing system data and stored network login information.
 1. List of saved network informations and passwords
 
 ## :bulb: Wiki
-[Here](https://github.com/MisterL-v/System-Identify/wiki) is the wiki in which I go into the details of the project and the individual functions
+[[Here]](https://github.com/MisterL-v/System-Identify/wiki) is the wiki in which I go into the details of the project and the individual functions
